@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Cálculo IMC</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+    </head>
+
+    <body>
+        <main class="container">
+            <h1 class="text-center mt-5">Cálculo de IMC</h1>
+
+            <div class="mt-5">
+                <form id="form_imc">
+                    <div class="row">
+                        <div class="col-sm-3 form-group">
+                            <label for="altura">Altura *</label>
+                            <input type="text" class="form-control mascara" name="altura" id="altura" placeholder="Altura (m)" required>
+                        </div>
+                        
+                        <div class="col-sm-3 form-group">
+                            <label for="peso">Peso *</label>
+                            <input type="text" class="form-control mascara" name="peso" id="peso" placeholder="Peso (Kg)" required>
+                        </div>
+
+                        <div class="col-sm-3 form-group">
+                            <label for="sexo">Sexo *</label>
+
+                            <select name="sexo" id="sexo" class="form-control" required>
+                                <option value="F">Feminino</option>
+                                <option value="M">Masculino</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-success alinhar-botao">Calcular</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <div class="modal fade" id="resultadoIMC" tabindex="-1" role="dialog" aria-labelledby="resultadoIMC" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Resultado IMC</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p id="resultado_img_texto"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
