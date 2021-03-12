@@ -24,8 +24,7 @@ $(document).ready(function() {
             let resultadoIMC = textoResultadoIMC(valorIMC);
 
             $('#resultado_img_texto').text(
-                'Seu IMC é: ' + valorIMC.toFixed(2) +
-                ' - ' + resultadoIMC
+                'Seu IMC é: ' + valorIMC.toFixed(2) + ' - ' + resultadoIMC
             );
 
             $("#resultadoIMC").modal("show");
